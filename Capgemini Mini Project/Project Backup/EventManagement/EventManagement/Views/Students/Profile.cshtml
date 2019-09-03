@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="capgemini project">
+  <meta name="author" content="Narayan Jha">
+
+  <title>ADVITYA 2K19</title>
+  <link href="~/Content/css/loader.css" rel="stylesheet" />
+  <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
+    @*Javascript for Student*@
+    <script src="~/Content/Custom_JS/StudentsJS/Students.js"></script>
+    <link href="~/Content/css/one-page-wonder.min.css" rel="stylesheet">
+    <link href="~/Content/css/StudentProfile.css" rel="stylesheet" />
+   @* <script src="~/Content/Custom_JS/qrcode.js"></script>*@
+<script src="~/Content/Custom_JS/qrious.js"></script>
+
+    
+</head>
+
+<body onload="disp_profile();">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVITYA 2K19</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+            <a class="nav-link active" href="/Students/Profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Students/RegEvt">Register Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Students/DispRegEvt">Registered Events</a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" onclick="StuLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br /><br /><br /><br /><br />
+   
+    <h2 style="text-align:center">User Admit Card for Advitya</h2>
+      <div  id="loader" class="loader"></div>
+    
+<div class="card" id="printCard">
+ <img id="qrious" style="margin-left:7%;">
+    <hr />
+    <script>
+        var qr = window.qr = new QRious({
+            element: document.getElementById('qrious'),
+            size: 250,
+            value: localStorage.stuid.toString()
+        });
+
+    </script>
+  <h1 id="name"></h1>
+   <hr />
+    
+  Father Name <p class="title" id="fname"></p>
+  Email <p id="email"></p>
+     Password <p id="pwd"></p>
+ <hr />
+  <p><button id="stuid"></button></p>
+    <button onclick="printCard()">Print Entry Card</button>
+</div>
+      
+    <script>
+        function printCard() {
+            var printContents = document.getElementById('printCard').innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+    <br /><br /><br /><br />
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">ADVITYA 2K19</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  
+  <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+ 
+  <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+     
+</body>
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d5ff580eb1a6b0be60908c8/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+</script>
+</html>

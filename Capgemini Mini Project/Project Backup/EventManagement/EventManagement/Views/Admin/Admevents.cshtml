@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ADVITYA 2K19</title>
+
+  <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  
+  
+    
+  <link href="~/Content/css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="~/Content/css/StudentProfile.css" rel="stylesheet" />
+  
+    <link href="~/Content/css/loader.css" rel="stylesheet" />
+    @*javascript file for admin event add *@
+    <script src="~/Content/Custom_JS/AdminJS/Admin.js"></script>
+    <script src="~/Content/Custom_JS/AdminJS/Registerations.js"></script>
+    
+</head>
+
+<body onload="LoadEventData()">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVITYA 2K19</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+            <a class="nav-link " href="/Admin/Index">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Admin/Admevents">Add Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Admin/Admregisterations">Registered Students</a>
+          </li>
+
+             <li class="nav-item">
+            <a class="nav-link " href="/Admin/AdmFastScanner">Fast Scanner</a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" onclick="AdmLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br /><br /><br /><br /><br />
+   
+     <div class="container">
+         <div  id="loader" class="loader"></div>
+       <div class="alert alert-success" id="msg" style="display:none;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> 
+</div>
+        <h4>Add Events</h4><hr />
+       <p id="eid" style="display:none;"></p>
+        <input type="text" class="form-control" id="time"  placeholder="Please Select the Time of event" /><br />
+           <input type="text" class="form-control" id="title" placeholder="Please enter title of events" />
+         <input type="text" class="form-control" id="desc" placeholder="Please enter Description of event" />
+          
+         <br />
+        <button onclick="addorupdevt()" id="addorupdevt">Add Event</button>
+          <button onclick="cancelupd()" id="cancel" style="display:none;">Cancel</button>
+    <hr />
+
+
+            <div class="container">
+  <h2>Events Schduled</h2>
+  <p>Please set the Event Carefully...</p>            
+  <table class="table table-striped display"  id="tbleventdisp">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Title</th>
+        <th>Description</th>
+            <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+    </tbody>
+  </table>
+</div>
+         </div>
+      
+
+    <br /><br /><br /><br />
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">ADVITYA 2K19</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+  <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+    <script src="~/Content/Custom_JS/MaxLength.min.js"></script>
+   
+     <script type="text/javascript">
+         $(function () {
+         
+
+             //Specifying the Character Count control explicitly.
+             $("#desc").MaxLength(
+         {
+             MaxLength: 150
+             
+         });
+
+             $("#title").MaxLength(
+       {
+           MaxLength: 40
+       
+       });
+
+             
+         });
+    </script>
+     
+   
+</html>

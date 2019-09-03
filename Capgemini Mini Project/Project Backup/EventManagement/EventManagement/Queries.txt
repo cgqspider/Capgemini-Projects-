@@ -1,0 +1,22 @@
+﻿QUERY TO GET ALL STUDENTS WITH REGISTERED EVENTS
+-------------------------------------------------------
+select * from tbregisterations
+
+inner join
+tbstudents on  tbregisterations.regstuid=tbstudents.stuid
+
+inner join 
+tbevents on tbregisterations.regevtid=tbevents.eid
+
+-------------------------------------------------------
+QUERY TO GET ALL EVENTS FOR SINGLE STUDENT
+-------------------------------------------------------
+select * from tbregisterations
+
+inner join
+tbstudents on  tbregisterations.regstuid=tbstudents.stuid
+
+inner join 
+tbevents on tbregisterations.regevtid=tbevents.eid
+
+where tbstudents.stuid=3

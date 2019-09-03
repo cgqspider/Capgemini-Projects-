@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title></title>
+  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+	<link href="css/jquery.timespace.dark.css?v2" rel="stylesheet">
+	<style>
+		body {
+			background:white;
+		}
+		a {
+			color: #8baac0;
+		}
+		h1,h2 {
+			text-align: center;
+			color: white;
+		}
+    h1 { margin: 150px auto 30px auto; text-align: center; }
+		#timeline, #timelineClock {
+			box-sizing: border-box;
+			padding: 10px;
+			width: 100%;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="jquery.timespace.js?v2"></script>
+</head>
+<body>
+ 
+	
+	<div id="timelineClock"></div>
+	
+	
+<script>
+	$(function () {
+
+		$('#timelineClock').timespace({
+
+			// Set the time suffix function for displaying as '12 A.M.'
+			timeSuffixFunction: s => ' ' + s[0].toUpperCase() + '.' + s[1].toUpperCase() + '.',
+			selectedEvent: -1,
+			data: {
+				headings: [
+					{start: 0, end: 6, title: 'Night'},
+					{start: 6, end: 12, title: 'Morning'},
+					{start: 12, end: 18, title: 'Afternoon'},
+					{start: 18, end: 24, title: 'Evening'},
+				],
+				events: [
+					{start: 6.50, title: 'Breakfast', description: 'Eat a healthy breakfast.'},
+					{start: 8, end: 10, title: 'Walk', description: 'Go for a walk.'},
+					{start: 14, title: 'Lunch', description: 'Eat a healthy lunch.'},
+					{start: 14.75, title: 'Meeting', description: 'Meeting with Co-workers.'},
+				]
+			},
+
+		});
+
+	
+	});
+</script>
+
+</body>
+</html>

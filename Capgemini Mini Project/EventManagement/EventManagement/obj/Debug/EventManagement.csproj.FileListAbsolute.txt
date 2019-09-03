@@ -1,0 +1,91 @@
+F:\Capgemini Projects\EventManagement\EventManagement\bin\EventManagement.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\EventManagement.pdb
+F:\Capgemini Projects\EventManagement\EventManagement\bin\Microsoft.Web.Infrastructure.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\Newtonsoft.Json.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Helpers.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Mvc.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Razor.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.Deployment.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.Razor.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\Newtonsoft.Json.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Helpers.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Mvc.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Razor.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.Deployment.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.WebPages.Razor.xml
+F:\Capgemini Projects\EventManagement\EventManagement\obj\Debug\EventManagement.dll
+F:\Capgemini Projects\EventManagement\EventManagement\obj\Debug\EventManagement.pdb
+F:\Capgemini Projects\EventManagement\EventManagement\bin\Microsoft.CSharp.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.ComponentModel.DataAnnotations.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Configuration.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Data.DataSetExtensions.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Data.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Drawing.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.EnterpriseServices.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Net.Http.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Net.Http.Formatting.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Net.Http.WebRequest.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Abstractions.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.ApplicationServices.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.DynamicData.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Entity.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Extensions.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Http.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Http.WebHost.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Routing.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Services.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Xml.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Xml.Linq.dll
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Net.Http.Formatting.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Http.xml
+F:\Capgemini Projects\EventManagement\EventManagement\bin\System.Web.Http.WebHost.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\EventManagement.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\EventManagement.pdb
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\Microsoft.CSharp.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\Microsoft.Web.Infrastructure.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\Newtonsoft.Json.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.ComponentModel.DataAnnotations.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Configuration.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Data.DataSetExtensions.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Data.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Drawing.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.EnterpriseServices.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Net.Http.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Net.Http.Formatting.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Net.Http.WebRequest.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Abstractions.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.ApplicationServices.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.DynamicData.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Entity.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Extensions.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Helpers.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Http.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Http.WebHost.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Mvc.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Razor.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Routing.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Services.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.Deployment.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.Razor.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Xml.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Xml.Linq.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\Newtonsoft.Json.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Net.Http.Formatting.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Helpers.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Http.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Http.WebHost.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Mvc.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.Razor.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.Deployment.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\bin\System.Web.WebPages.Razor.xml
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\obj\Debug\EventManagement.csprojResolveAssemblyReference.cache
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\obj\Debug\EventManagement.dll
+F:\Capgemini Projects\Mini Project\EventManagement\EventManagement\obj\Debug\EventManagement.pdb

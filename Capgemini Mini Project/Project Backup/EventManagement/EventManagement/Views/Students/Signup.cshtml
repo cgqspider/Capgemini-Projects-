@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Project for Capgemini">
+  <meta name="author" content="Narayan Jha">
+
+  <title>ADVITYA 2K19</title>
+  <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="~/Content/css/one-page-wonder.min.css" rel="stylesheet">
+  <link href="~/Content/css/loader.css" rel="stylesheet" />
+</head>
+
+<body >
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVITYA 2K19</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+            <a class="nav-link" href="/Students/Index">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Students/Signup">Sign Up</a>
+          </li>
+          <li class="nav-item">    
+            <a class="nav-link" href="/Students/Signin">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+        <br /><br /><br /><br /><br />
+            <div class="container">
+  <h2>Student Sign-up</h2><hr />
+       <div  id="loader" class="loader"></div>
+
+       
+<div class="alert alert-success" id="msg" style="display:none;">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> 
+</div>
+
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" required class="form-control" id="name"  placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="fname">Father Name:</label>
+      <input type="text" required class="form-control" id="fname"  placeholder="Enter Father Name" name="fname">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" required class="form-control" id="email"  placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" required class="form-control" id="pwd"  placeholder="Enter password" name="pwd">
+    </div>
+    
+    <button type="submit" class="btn btn-success" onclick="add()">Submit</button>
+<hr />
+</div>
+        <br /><br /><br /><br />
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">ADVITYA 2K19</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+        
+  <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+  <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="~/Content/Custom_JS/StudentsJS/Students.js"></script>
+
+</body>
+    @*Tawk.to services*@
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d5ff580eb1a6b0be60908c8/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+</script>
+</html>

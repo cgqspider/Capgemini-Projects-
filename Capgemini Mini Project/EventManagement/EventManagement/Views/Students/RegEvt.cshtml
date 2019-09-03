@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ADVITYA 2K19</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+        crossorigin="anonymous"></script>
+    
+    <link href="~/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <script src="~/Content/vendor/jquery/jquery.min.js"></script>
+   
+
+    <script src="~/Content/Custom_JS/StudentsJS/Students.js"></script>
+  <!-- Custom styles for this template -->
+  <link href="~/Content/css/one-page-wonder.min.css" rel="stylesheet">
+<link href="~/Content/css/StudentProfile.css" rel="stylesheet" />
+<link href="~/Content/css/loader.css" rel="stylesheet" />
+   
+</head>
+
+<body onload="LoadEventData();">
+      <div  id="loader" class="loader"></div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">ADVITYA 2K19</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+            <a class="nav-link" href="/Students/Profile">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/Students/RegEvt">Register Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Students/DispRegEvt">Registered Events</a>
+          </li>
+
+            <li class="nav-item">
+            <a class="nav-link" onclick="StuLogout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br /><br /><br /><br /><br />
+    <div class="container">
+         <div  id="loader" class="loader"></div>
+        <div class="alert alert-success" id="msg" style="display:none;">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>We are registering you in event. Please Wait...</strong> 
+        </div>
+        <h2>Select Event</h2><hr />
+   <select class="form-control" id="ddevt"></select>
+
+        <br />
+        <button id="btnregevt" onclick="StuRegEvt()">Register Event</button>
+
+        <br /><br />
+        <hr /> <h2>Event Timings</h2><hr />
+   <iframe src="/Students/Timeline" style="width:100%; height:500px;" frameBorder="0"></iframe>
+       
+        </div>
+   
+
+    <br /><br /><br /><br /><br /><br />
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">ADVITYA 2K19</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+ 
+  <script src="~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+    
+
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5d5ff580eb1a6b0be60908c8/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+</script>
+
+</html>

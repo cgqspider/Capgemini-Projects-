@@ -14,9 +14,9 @@ This project is for the university so that any student can apply for the admissi
   2. change the URL according to the Backend URL inside the frontend application.<br>
   3. Run the application using (ng serve)<br>
   4. Your application will be ready.<br>
-  
+  <br>
   It will Look Like this:
   <img src="./abacus.png" />
- 
-<h1>Paypal Ref :
+ <br>
+<h3>Paypal Ref :</h3>
   https://enngage.github.io/ngx-paypal/

@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+Hey i am working...
+</body>
+<script>
+
+
+    fetch("http://localhost:1474/Home/Hello").then(function(data) {
+        data.json().then(function (res) {
+            console.log(res);
+
+        })
+   }).catch(function(error) {
+      // If there is any error you will catch them here
+  });   
+    </script>
+</html>

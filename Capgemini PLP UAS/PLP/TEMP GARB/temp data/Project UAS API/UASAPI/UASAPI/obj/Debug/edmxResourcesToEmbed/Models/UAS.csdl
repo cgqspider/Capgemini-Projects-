@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UASModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="UASDBContext" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="tbadmins" EntityType="UASModel.tbadmin" />
+    <EntitySet Name="tbadmissions" EntityType="UASModel.tbadmission" />
+    <EntitySet Name="tbapplicants" EntityType="UASModel.tbapplicant" />
+    <EntitySet Name="tbcourses" EntityType="UASModel.tbcourse" />
+    <EntitySet Name="tbdepartments" EntityType="UASModel.tbdepartment" />
+    <EntitySet Name="tbeducations" EntityType="UASModel.tbeducation" />
+    <EntitySet Name="tbstreams" EntityType="UASModel.tbstream" />
+    <AssociationSet Name="FK_tbadmission_Totbcourse" Association="UASModel.FK_tbadmission_Totbcourse">
+      <End Role="tbcourse" EntitySet="tbcourses" />
+      <End Role="tbadmission" EntitySet="tbadmissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbdepartment" Association="UASModel.FK_tbadmission_Totbdepartment">
+      <End Role="tbdepartment" EntitySet="tbdepartments" />
+      <End Role="tbadmission" EntitySet="tbadmissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbstream" Association="UASModel.FK_tbadmission_Totbstream">
+      <End Role="tbstream" EntitySet="tbstreams" />
+      <End Role="tbadmission" EntitySet="tbadmissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbstudent" Association="UASModel.FK_tbadmission_Totbstudent">
+      <End Role="tbapplicant" EntitySet="tbapplicants" />
+      <End Role="tbadmission" EntitySet="tbadmissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbeducation_Totbstudent" Association="UASModel.FK_tbeducation_Totbstudent">
+      <End Role="tbapplicant" EntitySet="tbapplicants" />
+      <End Role="tbeducation" EntitySet="tbeducations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbcourse_Totbdepartment" Association="UASModel.FK_tbcourse_Totbdepartment">
+      <End Role="tbdepartment" EntitySet="tbdepartments" />
+      <End Role="tbcourse" EntitySet="tbcourses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbdepartment_Totbstream" Association="UASModel.FK_tbdepartment_Totbstream">
+      <End Role="tbstream" EntitySet="tbstreams" />
+      <End Role="tbdepartment" EntitySet="tbdepartments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbadmin">
+    <Key>
+      <PropertyRef Name="admid" />
+    </Key>
+    <Property Name="admid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="admname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="admemail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="admpwd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tbadmission">
+    <Key>
+      <PropertyRef Name="aid" />
+    </Key>
+    <Property Name="aid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="aappid" Type="Int32" Nullable="false" />
+    <Property Name="asid" Type="Int32" Nullable="false" />
+    <Property Name="adid" Type="Int32" Nullable="false" />
+    <Property Name="acid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbcourse" Relationship="UASModel.FK_tbadmission_Totbcourse" FromRole="tbadmission" ToRole="tbcourse" />
+    <NavigationProperty Name="tbdepartment" Relationship="UASModel.FK_tbadmission_Totbdepartment" FromRole="tbadmission" ToRole="tbdepartment" />
+    <NavigationProperty Name="tbstream" Relationship="UASModel.FK_tbadmission_Totbstream" FromRole="tbadmission" ToRole="tbstream" />
+    <NavigationProperty Name="tbapplicant" Relationship="UASModel.FK_tbadmission_Totbstudent" FromRole="tbadmission" ToRole="tbapplicant" />
+  </EntityType>
+  <EntityType Name="tbapplicant">
+    <Key>
+      <PropertyRef Name="appid" />
+    </Key>
+    <Property Name="appid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="appfname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appfcontact" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="appname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appemail" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="apppwd" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="appcontact" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="appaddress" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="appgender" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="appDOB" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="tbadmissions" Relationship="UASModel.FK_tbadmission_Totbstudent" FromRole="tbapplicant" ToRole="tbadmission" />
+    <NavigationProperty Name="tbeducations" Relationship="UASModel.FK_tbeducation_Totbstudent" FromRole="tbapplicant" ToRole="tbeducation" />
+  </EntityType>
+  <EntityType Name="tbcourse">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="cname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="cdid" Type="Int32" />
+    <NavigationProperty Name="tbadmissions" Relationship="UASModel.FK_tbadmission_Totbcourse" FromRole="tbcourse" ToRole="tbadmission" />
+    <NavigationProperty Name="tbdepartment" Relationship="UASModel.FK_tbcourse_Totbdepartment" FromRole="tbcourse" ToRole="tbdepartment" />
+  </EntityType>
+  <EntityType Name="tbdepartment">
+    <Key>
+      <PropertyRef Name="did" />
+    </Key>
+    <Property Name="did" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="dname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dsid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbadmissions" Relationship="UASModel.FK_tbadmission_Totbdepartment" FromRole="tbdepartment" ToRole="tbadmission" />
+    <NavigationProperty Name="tbcourses" Relationship="UASModel.FK_tbcourse_Totbdepartment" FromRole="tbdepartment" ToRole="tbcourse" />
+    <NavigationProperty Name="tbstream" Relationship="UASModel.FK_tbdepartment_Totbstream" FromRole="tbdepartment" ToRole="tbstream" />
+  </EntityType>
+  <EntityType Name="tbeducation">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="eappid" Type="Int32" Nullable="false" />
+    <Property Name="yop_10" Type="Int32" Nullable="false" />
+    <Property Name="board_10" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="percent_10" Type="Int32" Nullable="false" />
+    <Property Name="yop_12" Type="Int32" Nullable="false" />
+    <Property Name="board_12" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="percent_12" Type="Int32" Nullable="false" />
+    <Property Name="yop_grad" Type="Int32" Nullable="false" />
+    <Property Name="board_grad" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="percent_grad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tbapplicant" Relationship="UASModel.FK_tbeducation_Totbstudent" FromRole="tbeducation" ToRole="tbapplicant" />
+  </EntityType>
+  <EntityType Name="tbstream">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="sname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tbadmissions" Relationship="UASModel.FK_tbadmission_Totbstream" FromRole="tbstream" ToRole="tbadmission" />
+    <NavigationProperty Name="tbdepartments" Relationship="UASModel.FK_tbdepartment_Totbstream" FromRole="tbstream" ToRole="tbdepartment" />
+  </EntityType>
+  <Association Name="FK_tbadmission_Totbcourse">
+    <End Role="tbcourse" Type="UASModel.tbcourse" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcourse">
+        <PropertyRef Name="cid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="acid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbdepartment">
+    <End Role="tbdepartment" Type="UASModel.tbdepartment" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbdepartment">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="adid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbstream">
+    <End Role="tbstream" Type="UASModel.tbstream" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbstream">
+        <PropertyRef Name="sid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="asid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbstudent">
+    <End Role="tbapplicant" Type="UASModel.tbapplicant" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbapplicant">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="aappid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbeducation_Totbstudent">
+    <End Role="tbapplicant" Type="UASModel.tbapplicant" Multiplicity="1" />
+    <End Role="tbeducation" Type="UASModel.tbeducation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbapplicant">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="tbeducation">
+        <PropertyRef Name="eappid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbcourse_Totbdepartment">
+    <End Role="tbdepartment" Type="UASModel.tbdepartment" Multiplicity="0..1" />
+    <End Role="tbcourse" Type="UASModel.tbcourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbdepartment">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="tbcourse">
+        <PropertyRef Name="cdid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbdepartment_Totbstream">
+    <End Role="tbstream" Type="UASModel.tbstream" Multiplicity="1" />
+    <End Role="tbdepartment" Type="UASModel.tbdepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbstream">
+        <PropertyRef Name="sid" />
+      </Principal>
+      <Dependent Role="tbdepartment">
+        <PropertyRef Name="dsid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UASModelStoreContainer" CdmEntityContainer="UASDBContext">
+    <EntitySetMapping Name="tbadmins">
+      <EntityTypeMapping TypeName="UASModel.tbadmin">
+        <MappingFragment StoreEntitySet="tbadmin">
+          <ScalarProperty Name="admid" ColumnName="admid" />
+          <ScalarProperty Name="admname" ColumnName="admname" />
+          <ScalarProperty Name="admemail" ColumnName="admemail" />
+          <ScalarProperty Name="admpwd" ColumnName="admpwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbadmissions">
+      <EntityTypeMapping TypeName="UASModel.tbadmission">
+        <MappingFragment StoreEntitySet="tbadmission">
+          <ScalarProperty Name="aid" ColumnName="aid" />
+          <ScalarProperty Name="aappid" ColumnName="aappid" />
+          <ScalarProperty Name="asid" ColumnName="asid" />
+          <ScalarProperty Name="adid" ColumnName="adid" />
+          <ScalarProperty Name="acid" ColumnName="acid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbapplicants">
+      <EntityTypeMapping TypeName="UASModel.tbapplicant">
+        <MappingFragment StoreEntitySet="tbapplicant">
+          <ScalarProperty Name="appid" ColumnName="appid" />
+          <ScalarProperty Name="appfname" ColumnName="appfname" />
+          <ScalarProperty Name="appfcontact" ColumnName="appfcontact" />
+          <ScalarProperty Name="appname" ColumnName="appname" />
+          <ScalarProperty Name="appemail" ColumnName="appemail" />
+          <ScalarProperty Name="apppwd" ColumnName="apppwd" />
+          <ScalarProperty Name="appcontact" ColumnName="appcontact" />
+          <ScalarProperty Name="appaddress" ColumnName="appaddress" />
+          <ScalarProperty Name="appgender" ColumnName="appgender" />
+          <ScalarProperty Name="appDOB" ColumnName="appDOB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbcourses">
+      <EntityTypeMapping TypeName="UASModel.tbcourse">
+        <MappingFragment StoreEntitySet="tbcourse">
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="cname" ColumnName="cname" />
+          <ScalarProperty Name="cdid" ColumnName="cdid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbdepartments">
+      <EntityTypeMapping TypeName="UASModel.tbdepartment">
+        <MappingFragment StoreEntitySet="tbdepartment">
+          <ScalarProperty Name="did" ColumnName="did" />
+          <ScalarProperty Name="dname" ColumnName="dname" />
+          <ScalarProperty Name="dsid" ColumnName="dsid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbeducations">
+      <EntityTypeMapping TypeName="UASModel.tbeducation">
+        <MappingFragment StoreEntitySet="tbeducation">
+          <ScalarProperty Name="eid" ColumnName="eid" />
+          <ScalarProperty Name="eappid" ColumnName="eappid" />
+          <ScalarProperty Name="yop_10" ColumnName="yop_10" />
+          <ScalarProperty Name="board_10" ColumnName="board_10" />
+          <ScalarProperty Name="percent_10" ColumnName="percent_10" />
+          <ScalarProperty Name="yop_12" ColumnName="yop_12" />
+          <ScalarProperty Name="board_12" ColumnName="board_12" />
+          <ScalarProperty Name="percent_12" ColumnName="percent_12" />
+          <ScalarProperty Name="yop_grad" ColumnName="yop_grad" />
+          <ScalarProperty Name="board_grad" ColumnName="board_grad" />
+          <ScalarProperty Name="percent_grad" ColumnName="percent_grad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbstreams">
+      <EntityTypeMapping TypeName="UASModel.tbstream">
+        <MappingFragment StoreEntitySet="tbstream">
+          <ScalarProperty Name="sid" ColumnName="sid" />
+          <ScalarProperty Name="sname" ColumnName="sname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

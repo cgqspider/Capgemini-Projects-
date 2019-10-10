@@ -1,0 +1,48 @@
+FOR ADMIN TO CHECK ALL THE APPLICANT DETAILS
+---------------------------------------------------------------------------------------------------
+select * from tbadmission
+inner join
+tbapplicant on tbadmission.aappid=tbapplicant.appid
+
+inner join
+tbstream on tbadmission.asid=tbstream.sid
+
+inner join 
+tbdepartment on tbadmission.adid=tbdepartment.did
+
+inner join 
+tbcourse on tbadmission.acid=tbcourse.cid
+--------------------------------------------------------------------------------------------
+FOR STUDENT TO CHECK APPLIED FOR ALL APPLICATIONS
+---------------------------------------------------------------------------------------------
+select * from tbadmission
+inner join
+tbapplicant on tbadmission.aappid=tbapplicant.appid
+
+inner join
+tbstream on tbadmission.asid=tbstream.sid
+
+inner join 
+tbdepartment on tbadmission.adid=tbdepartment.did
+
+inner join 
+tbcourse on tbadmission.acid=tbcourse.cid
+
+where tbapplicant.appid=1
+
+-----------------------------------------------------------------------------------------------
+select appfname,appfcontact,appname,appemail,appcontact,appaddress,appgender,appDOB,sname,dname,cname from tbadmission
+inner join
+tbapplicant on tbadmission.aappid=tbapplicant.appid
+
+inner join
+tbstream on tbadmission.asid=tbstream.sid
+
+inner join 
+tbdepartment on tbadmission.adid=tbdepartment.did
+
+inner join 
+tbcourse on tbadmission.acid=tbcourse.cid
+
+
+

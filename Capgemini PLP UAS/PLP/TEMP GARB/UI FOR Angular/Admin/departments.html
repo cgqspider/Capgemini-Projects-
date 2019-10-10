@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Admin Panel</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="./streams.html">Streams</a></li>
+      <li class="active"><a href="./departments.html">Departments</a></li>
+      <li><a href="./courses.html">Courses</a></li>
+      <li><a href="./Allaplicants.html">All Applicants</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+  
+
+<div class="container">
+    <h2>Departments</h2><hr>
+    <div class="form-group">
+            <label for="Stream">Stream</label>
+           <select class="form-control">
+               <option>Select Stream</option>
+           </select>
+          </div>
+
+
+    <div class="form-group">
+        <label for="department">department Name:</label>
+        <input type="text" class="form-control" id="department" placeholder="Enter department" name="department">
+      </div>
+      <button type="submit" class="btn btn-default">Add</button>
+  <hr> 
+             
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John</td>
+          <td>Doe</td>
+          <td>john@example.com</td>
+        </tr>
+        <tr>
+          <td>Mary</td>
+          <td>Moe</td>
+          <td>mary@example.com</td>
+        </tr>
+        <tr>
+          <td>July</td>
+          <td>Dooley</td>
+          <td>july@example.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

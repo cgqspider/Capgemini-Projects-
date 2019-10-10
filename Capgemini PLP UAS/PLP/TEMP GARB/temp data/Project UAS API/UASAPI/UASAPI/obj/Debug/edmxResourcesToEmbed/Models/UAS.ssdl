@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UASModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="UASModelStoreContainer">
+    <EntitySet Name="tbadmin" EntityType="UASModel.Store.tbadmin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbadmission" EntityType="UASModel.Store.tbadmission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbapplicant" EntityType="UASModel.Store.tbapplicant" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbcourse" EntityType="UASModel.Store.tbcourse" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbdepartment" EntityType="UASModel.Store.tbdepartment" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbeducation" EntityType="UASModel.Store.tbeducation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tbstream" EntityType="UASModel.Store.tbstream" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_tbadmission_Totbcourse" Association="UASModel.Store.FK_tbadmission_Totbcourse">
+      <End Role="tbcourse" EntitySet="tbcourse" />
+      <End Role="tbadmission" EntitySet="tbadmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbdepartment" Association="UASModel.Store.FK_tbadmission_Totbdepartment">
+      <End Role="tbdepartment" EntitySet="tbdepartment" />
+      <End Role="tbadmission" EntitySet="tbadmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbstream" Association="UASModel.Store.FK_tbadmission_Totbstream">
+      <End Role="tbstream" EntitySet="tbstream" />
+      <End Role="tbadmission" EntitySet="tbadmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbadmission_Totbstudent" Association="UASModel.Store.FK_tbadmission_Totbstudent">
+      <End Role="tbapplicant" EntitySet="tbapplicant" />
+      <End Role="tbadmission" EntitySet="tbadmission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbcourse_Totbdepartment" Association="UASModel.Store.FK_tbcourse_Totbdepartment">
+      <End Role="tbdepartment" EntitySet="tbdepartment" />
+      <End Role="tbcourse" EntitySet="tbcourse" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbdepartment_Totbstream" Association="UASModel.Store.FK_tbdepartment_Totbstream">
+      <End Role="tbstream" EntitySet="tbstream" />
+      <End Role="tbdepartment" EntitySet="tbdepartment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbeducation_Totbstudent" Association="UASModel.Store.FK_tbeducation_Totbstudent">
+      <End Role="tbapplicant" EntitySet="tbapplicant" />
+      <End Role="tbeducation" EntitySet="tbeducation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tbadmin">
+    <Key>
+      <PropertyRef Name="admid" />
+    </Key>
+    <Property Name="admid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="admname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="admemail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="admpwd" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbadmission">
+    <Key>
+      <PropertyRef Name="aid" />
+    </Key>
+    <Property Name="aid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="aappid" Type="int" Nullable="false" />
+    <Property Name="asid" Type="int" Nullable="false" />
+    <Property Name="adid" Type="int" Nullable="false" />
+    <Property Name="acid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbapplicant">
+    <Key>
+      <PropertyRef Name="appid" />
+    </Key>
+    <Property Name="appid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="appfname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="appfcontact" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="appname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="appemail" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="apppwd" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="appcontact" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="appaddress" Type="varchar" Nullable="false" MaxLength="300" />
+    <Property Name="appgender" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="appDOB" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbcourse">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="cname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="cdid" Type="int" />
+  </EntityType>
+  <EntityType Name="tbdepartment">
+    <Key>
+      <PropertyRef Name="did" />
+    </Key>
+    <Property Name="did" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="dname" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="dsid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbeducation">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="eappid" Type="int" Nullable="false" />
+    <Property Name="yop_10" Type="int" Nullable="false" />
+    <Property Name="board_10" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="percent_10" Type="int" Nullable="false" />
+    <Property Name="yop_12" Type="int" Nullable="false" />
+    <Property Name="board_12" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="percent_12" Type="int" Nullable="false" />
+    <Property Name="yop_grad" Type="int" Nullable="false" />
+    <Property Name="board_grad" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="percent_grad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbstream">
+    <Key>
+      <PropertyRef Name="sid" />
+    </Key>
+    <Property Name="sid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sname" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_tbadmission_Totbcourse">
+    <End Role="tbcourse" Type="UASModel.Store.tbcourse" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.Store.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbcourse">
+        <PropertyRef Name="cid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="acid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbdepartment">
+    <End Role="tbdepartment" Type="UASModel.Store.tbdepartment" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.Store.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbdepartment">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="adid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbstream">
+    <End Role="tbstream" Type="UASModel.Store.tbstream" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.Store.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbstream">
+        <PropertyRef Name="sid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="asid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbadmission_Totbstudent">
+    <End Role="tbapplicant" Type="UASModel.Store.tbapplicant" Multiplicity="1" />
+    <End Role="tbadmission" Type="UASModel.Store.tbadmission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbapplicant">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="tbadmission">
+        <PropertyRef Name="aappid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbcourse_Totbdepartment">
+    <End Role="tbdepartment" Type="UASModel.Store.tbdepartment" Multiplicity="0..1" />
+    <End Role="tbcourse" Type="UASModel.Store.tbcourse" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbdepartment">
+        <PropertyRef Name="did" />
+      </Principal>
+      <Dependent Role="tbcourse">
+        <PropertyRef Name="cdid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbdepartment_Totbstream">
+    <End Role="tbstream" Type="UASModel.Store.tbstream" Multiplicity="1" />
+    <End Role="tbdepartment" Type="UASModel.Store.tbdepartment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbstream">
+        <PropertyRef Name="sid" />
+      </Principal>
+      <Dependent Role="tbdepartment">
+        <PropertyRef Name="dsid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbeducation_Totbstudent">
+    <End Role="tbapplicant" Type="UASModel.Store.tbapplicant" Multiplicity="1" />
+    <End Role="tbeducation" Type="UASModel.Store.tbeducation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbapplicant">
+        <PropertyRef Name="appid" />
+      </Principal>
+      <Dependent Role="tbeducation">
+        <PropertyRef Name="eappid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

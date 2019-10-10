@@ -1,0 +1,44 @@
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+----------------------------------ADMIN LOGIN-----------------------------------
+
+CREATE PROCEDURE SP_AdmLogin
+	@eml varchar(20),
+	@pwd varchar(20),
+	@cod int output
+AS
+	Declare @actpwd varchar(20)
+	
+	select @actpwd=admpwd from tbadmin where admemail=@eml
+	
+	if @actpwd=@pwd
+	
+	select @cod=admid from tbadmin where admemail=@eml
+
+	else
+	set @cod=-1
+
+RETURN 0
+
+//--------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+----------------------------------APPLICANT LOGIN-----------------------------------
+
+
+CREATE PROCEDURE SP_AppLogin
+	@eml varchar(20),
+	@pwd varchar(20),
+	@cod int output
+AS
+	Declare @actpwd varchar(20)
+	
+	select @actpwd=apppwd from tbapplicant where appemail=@eml
+	
+	if @actpwd=@pwd
+	
+	select @cod=appid from tbapplicant where appemail=@eml
+
+	else
+	set @cod=-1
+
+RETURN 0

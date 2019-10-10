@@ -1,0 +1,47 @@
+TABLE STUDENTS
+-------------------------------------------------------------------------------
+CREATE TABLE [dbo].[tbstudents] (
+    [stuid]    INT          IDENTITY (1, 1) NOT NULL,
+    [stuname]  VARCHAR (50) NOT NULL,
+    [stufname] VARCHAR (50) NOT NULL,
+    [stuemail] VARCHAR (50) NOT NULL,
+    [stupwd]   VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([stuid] ASC)
+);
+-----------------------------------------------------------------------------------
+TABLE REGISTERATIONS
+------------------------------------------------------------------------------------
+CREATE TABLE [dbo].[tbregisterations] (
+    [regid]    INT IDENTITY (1, 1) NOT NULL,
+    [regstuid] INT NOT NULL,
+    [regevtid] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([regid] ASC),
+    CONSTRAINT [FK_tbregisterations_To_tbstudents] FOREIGN KEY ([regstuid]) REFERENCES [dbo].[tbstudents] ([stuid]),
+    CONSTRAINT [FK_tbregisterations_To_tbevents] FOREIGN KEY ([regevtid]) REFERENCES [dbo].[tbevents] ([eid])
+);
+-----------------------------------------------------------------------------------
+TABLE EVENTS
+------------------------------------------------------------------------------------
+CREATE TABLE [dbo].[tbevents] (
+    [eid]    INT           IDENTITY (1, 1) NOT NULL,
+    [etime]  VARCHAR (10)  NOT NULL,
+    [etitle] VARCHAR (50)  NOT NULL,
+    [edesc]  VARCHAR (300) NOT NULL,
+    PRIMARY KEY CLUSTERED ([eid] ASC)
+);
+
+-----------------------------------------------------------------------------------
+TABLE ADMIN
+------------------------------------------------------------------------------------
+
+
+CREATE TABLE [dbo].[tbadmin] (
+    [aid]    INT          IDENTITY (1, 1) NOT NULL,
+    [aemail] VARCHAR (50) NOT NULL,
+    [apwd]   VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([aid] ASC)
+);
+
+
+
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b367f9a17de424a92399e4ca8ff47b8" Name="Diagram1">
+        <EntityTypeShape EntityType="UASModel.tbadmin" Width="1.5" PointX="7.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbadmission" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbapplicant" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbcourse" Width="1.5" PointX="5.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbdepartment" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbeducation" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UASModel.tbstream" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="UASModel.FK_tbadmission_Totbcourse" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbadmission_Totbdepartment" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbadmission_Totbstream" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbadmission_Totbstudent" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbeducation_Totbstudent" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbcourse_Totbdepartment" ManuallyRouted="false" />
+        <AssociationConnector Association="UASModel.FK_tbdepartment_Totbstream" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

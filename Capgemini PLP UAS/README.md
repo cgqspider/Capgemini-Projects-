@@ -10,8 +10,8 @@ This project is for the university so that any student can apply for the admissi
 5. It will create one URL 
 <h3>
 <h4>Frontend</h4>  
-  1. Go to the frontend folder in a project. Install all the dependencies using (npm install).
-  2. change the URL according to the Backend URL inside the frontend application.
-  3. Run the application using (ng serve)
-  4. Your application will be ready.
+  1. Go to the frontend folder in a project. Install all the dependencies using (npm install).<br>
+  2. change the URL according to the Backend URL inside the frontend application.<br>
+  3. Run the application using (ng serve)<br>
+  4. Your application will be ready.<br>
  
